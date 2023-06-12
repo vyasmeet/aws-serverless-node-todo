@@ -48,11 +48,19 @@ functions:
           method: get
           cors: true
 
+  update:
+    handler: handler/updateTodo.updateTodo
+    events:
+      - http:
+          path: todos/update/{id}
+          method: put
+          cors: true
+  
   delete:
     handler: handler/deleteTodo.deleteTodo
     events:
       - http:
-          path: todos/{id}
+          path: todos/delete/{id}
           method: delete
           cors: true  
 
