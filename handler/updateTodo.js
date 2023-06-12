@@ -17,10 +17,10 @@ module.exports.updateTodo = async (event, context, callback) => {
         Key: {
             id: event.pathParameters.id,
         },
-        ExpressionAttributesNames: {
+        ExpressionAttributeNames: {
             "#todo_text": "todo"
         },
-        ExpressionAttributesValues: {
+        ExpressionAttributeValues: {
             ":todo": data.todo,
             ":checked": data.checked,
             ":updatedAt": datetime
